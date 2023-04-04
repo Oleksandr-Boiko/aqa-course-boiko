@@ -7,7 +7,7 @@ public class Task2 {
         int enteredValue = scanner.nextInt();
         int factorial = enteredValue;
         for (int i = enteredValue; i > 1; i--){
-            factorial = factorial * (i - 1);
+            factorial*= (i - 1);
         }
         System.out.println(factorial);
     }
