@@ -5,9 +5,8 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your message: ");
         String enteredMessage = scanner.nextLine();
-        String[] array = enteredMessage.split(" ");
-        for (int i = 0; i < array.length; i++){
-            System.out.println(array[i].toUpperCase());
+        for (int i = 0; i < enteredMessage.length(); i++){
+            System.out.println(enteredMessage.toUpperCase().charAt(i));
         }
     }
 }
