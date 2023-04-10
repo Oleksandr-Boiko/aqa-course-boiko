@@ -10,6 +10,8 @@ public class StepFirst {
         double doubleVar = 22.453;
         char charVar = 'c';
         boolean booleanVar = true;
-        System.out.println(byteVar + shortVar + intVar + longVar + floatVar + doubleVar + charVar + " " + booleanVar);
+        System.out.println("byte: " + byteVar + " short: " + shortVar + " int: " + intVar +
+                           " long: " + longVar + " float: " + floatVar + " double: " + doubleVar +
+                           " char: " + charVar + " boolean: " + booleanVar);
     }
 }
