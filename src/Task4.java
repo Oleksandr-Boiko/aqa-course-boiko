@@ -5,6 +5,6 @@ public class Task4 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your message: ");
         String enteredMessage = scanner.nextLine();
-        System.out.println(enteredMessage.replaceAll("([A-Z])", "\"\"$1"));
+        System.out.println(enteredMessage.replaceAll("([A-Z])", " "));
     }
 }

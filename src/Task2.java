@@ -11,7 +11,12 @@ public class Task2 {
                 System.out.println(new StringBuilder(enteredMessage).reverse());
             }
             else {
-                System.out.println(enteredMessage.toUpperCase());
+                if (i % 2 == 0) {
+                    System.out.println(array[i].toUpperCase());
+                }
+                else {
+                    System.out.println(array[i]);
+                }
             }
         }
     }
