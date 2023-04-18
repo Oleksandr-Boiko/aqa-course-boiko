@@ -6,13 +6,13 @@ public class Task3 {
         System.out.println("Enter your message: ");
         String enteredMessage = scanner.nextLine();
         System.out.println("Enter your symbol: ");
-        String enteredSymbol = scanner.next();
+        String enteredSymbol = scanner.nextLine();
         int counter = 0;
         for (int i = 0; i < enteredMessage.length(); i++){
-            if (enteredMessage.charAt(i) !=' ') {
+            if (enteredMessage.charAt(i) == enteredSymbol.charAt(0)) {
                 counter++;
             }
         }
-        System.out.println(counter + enteredSymbol.length());
+        System.out.println(counter);
     }
 }
