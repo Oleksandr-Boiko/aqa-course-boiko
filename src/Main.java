@@ -1,3 +1,8 @@
+import java_oop.Address;
+import java_oop.Card;
+import java_oop.Manager;
+import java_oop.User;
+
 public class Main {
     public static void main(String[] args) {
         Manager pedro = new Manager("Pedro Huan", "pedro.huan@pdffiller.team", "Admin", "Master Yoda");

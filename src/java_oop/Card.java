@@ -1,3 +1,5 @@
+package java_oop;
+
 public class Card {
     private String id;
     private String number;
@@ -6,12 +8,12 @@ public class Card {
     private String cardType;
 
     public Card(String number, String expiredDate, int cvv, String cardType) {
-        this.id = "1" + System.currentTimeMillis();
+        id = "1" + System.currentTimeMillis();
         if (cardType.equals("Visa") || cardType.equals("MasterCard")){
             this.cardType = cardType;
         }
         else {
-            System.out.println("Card type must be Visa or MasterCard");
+            System.out.println("java_oop.Card type must be Visa or MasterCard");
         }
 
         this.number = number;
@@ -58,7 +60,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Card{" +
+        return "java_oop.Card{" +
                 "id='" + id + '\'' +
                 ", number='" + number + '\'' +
                 ", expiredDate='" + expiredDate + '\'' +

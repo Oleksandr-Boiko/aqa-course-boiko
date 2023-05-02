@@ -1,3 +1,5 @@
+package java_oop;
+
 import java.util.ArrayList;
 
 public class User {
@@ -12,9 +14,19 @@ public class User {
     private ArrayList<Card> cards = new ArrayList<>();
     private Role role;
     private Manager manager;
+    public String userDataToPrint = "java_oop.User{" +
+            ", firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", fullName='" + fullName + '\'' +
+            ", email='" + email + '\'' +
+            ", phoneNumber='" + phoneNumber + '\'' +
+            ", billingAddress='" + billingAddress + '\'' +
+            ", deliveryAddress='" + deliveryAddress + '\'' +
+            ", role='" + role + '\'' +
+            '}';
 
     public User(String fullName, String email, String role) {
-        this.id = "1" + System.currentTimeMillis();
+        id = "1" + System.currentTimeMillis();
         this.fullName = fullName;
         String[] splittedFullName = fullName.split(" ");
         this.firstName = splittedFullName[0];
@@ -24,12 +36,9 @@ public class User {
     }
 
     public User(String firstName, String lastName, String email, String role) {
-        this.id = "1" + System.currentTimeMillis();
+        this(firstName.concat(" " + lastName), email, role);
         this.firstName = firstName;
         this.lastName = lastName;
-        this.fullName = firstName.concat(" " + lastName);
-        this.email = email;
-        this.role = new Role(role);
     }
 
     public String getId() {
@@ -40,32 +49,16 @@ public class User {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getFullName() {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getPhoneNumber() {
@@ -119,7 +112,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "java_oop.User{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
@@ -134,20 +127,7 @@ public class User {
                 '}';
     }
 
-    public String userDataToPrint() {
-        return "User{" +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", fullName='" + fullName + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", billingAddress='" + billingAddress + '\'' +
-                ", deliveryAddress='" + deliveryAddress + '\'' +
-                ", role='" + role + '\'' +
-                '}';
-    }
-
     public void printUserInfo() {
-        System.out.println(userDataToPrint());
+        System.out.println(userDataToPrint);
     }
 }

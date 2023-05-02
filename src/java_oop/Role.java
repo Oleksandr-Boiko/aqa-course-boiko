@@ -1,3 +1,5 @@
+package java_oop;
+
 public class Role {
     private boolean viewAll;
     private boolean editAll;
@@ -17,7 +19,7 @@ public class Role {
             case "Main Customer" -> {
                 viewAll = true;
                 editAll = true;
-                addAll = false;
+                addAll = true;
                 deleteAll = false;
             }
             case "Customer" -> {
@@ -37,7 +39,7 @@ public class Role {
 
     @Override
     public String toString() {
-        return "Role{" +
+        return "java_oop.Role{" +
                 "viewAll=" + viewAll +
                 ", editAll=" + editAll +
                 ", addAll=" + addAll +

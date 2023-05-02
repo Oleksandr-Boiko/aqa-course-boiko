@@ -1,3 +1,5 @@
+package java_oop;
+
 public class Address {
     private String id;
     private String country;
@@ -8,7 +10,7 @@ public class Address {
     private String zipCode;
 
     public Address(String country, String city, String street, String building, String zipCode) {
-        this.id = "1" + System.currentTimeMillis();
+        id = "1" + System.currentTimeMillis();
         this.country = country;
         this.city = city;
         this.street = street;
@@ -70,7 +72,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
+        return "java_oop.Address{" +
                 "id='" + id + '\'' +
                 ", country='" + country + '\'' +
                 ", city='" + city + '\'' +

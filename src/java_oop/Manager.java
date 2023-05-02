@@ -1,3 +1,5 @@
+package java_oop;
+
 public class Manager extends User {
     private String position;
     private String responsibilityDistrict;
@@ -44,7 +46,7 @@ public class Manager extends User {
 
     @Override
     public String toString() {
-        return " Manager{" +
+        return " java_oop.Manager{" +
                 "position='" + position + '\'' +
                 ", responsibilityDistrict='" + responsibilityDistrict + '\'' +
                 ", workPhoneNumber='" + workPhoneNumber + '\'' +
@@ -53,6 +55,6 @@ public class Manager extends User {
 
     @Override
     public void printUserInfo() {
-        System.out.println(super.userDataToPrint().concat(this.toString()));
+        System.out.println(super.userDataToPrint.concat(toString()));
     }
 }
