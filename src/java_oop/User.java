@@ -14,16 +14,6 @@ public class User {
     private ArrayList<Card> cards = new ArrayList<>();
     private Role role;
     private Manager manager;
-    public String userDataToPrint = "java_oop.User{" +
-            ", firstName='" + firstName + '\'' +
-            ", lastName='" + lastName + '\'' +
-            ", fullName='" + fullName + '\'' +
-            ", email='" + email + '\'' +
-            ", phoneNumber='" + phoneNumber + '\'' +
-            ", billingAddress='" + billingAddress + '\'' +
-            ", deliveryAddress='" + deliveryAddress + '\'' +
-            ", role='" + role + '\'' +
-            '}';
 
     public User(String fullName, String email, String role) {
         id = "1" + System.currentTimeMillis();
@@ -128,6 +118,16 @@ public class User {
     }
 
     public void printUserInfo() {
+        String userDataToPrint = "java_oop.User{" +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", billingAddress='" + billingAddress + '\'' +
+                ", deliveryAddress='" + deliveryAddress + '\'' +
+                ", role='" + role + '\'' +
+                '}';
         System.out.println(userDataToPrint);
     }
 }
