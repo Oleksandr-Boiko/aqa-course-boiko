@@ -15,18 +15,18 @@ public class User {
     private Role role;
     private Manager manager;
 
-    public User(String fullName, String email, String role) {
+    public User(String fullName, String email, RoleType roleType) {
         id = "1" + System.currentTimeMillis();
         this.fullName = fullName;
         String[] splittedFullName = fullName.split(" ");
         this.firstName = splittedFullName[0];
         this.lastName = splittedFullName[1];
         this.email = email;
-        this.role = new Role(role);
+        role = roleType.getRole();
     }
 
-    public User(String firstName, String lastName, String email, String role) {
-        this(firstName.concat(" " + lastName), email, role);
+    public User(String firstName, String lastName, String email, RoleType roleType) {
+        this(firstName.concat(" " + lastName), email, roleType);
         this.firstName = firstName;
         this.lastName = lastName;
     }

@@ -5,13 +5,13 @@ public class Manager extends User {
     private String responsibilityDistrict;
     private String workPhoneNumber;
 
-    public Manager(String fullName, String email, String role, String position) {
-        super(fullName, email, role);
+    public Manager(String fullName, String email, RoleType roleType, String position) {
+        super(fullName, email, roleType);
         this.position = position;
     }
 
-    public Manager(String firstName, String lastName, String email, String role, String position) {
-        super(firstName, lastName, email, role);
+    public Manager(String firstName, String lastName, String email, RoleType roleType, String position) {
+        super(firstName, lastName, email, roleType);
         this.position = position;
     }
 

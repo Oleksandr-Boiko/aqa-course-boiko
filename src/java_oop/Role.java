@@ -7,34 +7,11 @@ public class Role {
     private boolean deleteAll;
     private String role;
 
-    public Role(String role) {
-        this.role = role;
-        switch (role) {
-            case "Admin" -> {
-                viewAll = true;
-                editAll = true;
-                addAll = true;
-                deleteAll = true;
-            }
-            case "Main Customer" -> {
-                viewAll = true;
-                editAll = true;
-                addAll = true;
-                deleteAll = false;
-            }
-            case "Customer" -> {
-                viewAll = true;
-                editAll = false;
-                addAll = true;
-                deleteAll = false;
-            }
-            case "Viewer" -> {
-                viewAll = true;
-                editAll = false;
-                addAll = false;
-                deleteAll = false;
-            }
-        }
+    public Role(Boolean viewAll, Boolean editAll, Boolean addAll, Boolean deleteAll) {
+        this.viewAll = viewAll;
+        this.editAll = editAll;
+        this.addAll = addAll;
+        this.deleteAll = deleteAll;
     }
 
     @Override
