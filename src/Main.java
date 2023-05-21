@@ -8,7 +8,7 @@ public class Main {
         pedro.setWorkPhoneNumber("+380931234567");
         pedro.setResponsibilityDistrict("Yoda's Hut");
         pedro.setPosition("Head Of Jedi");
-        pedro.printUserInfo();
+        pedro.printinfo();
         System.out.println(pedro.getId());
         User alex = new User("Oleksandr", "Boiko", "alex.boiko@pdffiller.team", new RoleType(roles.MAIN_CUSTOMER));
         alex.setDeliveryAddress(new Address("Ukraine", "Kyiv", "Paladina", "29", "03114"));

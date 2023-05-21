@@ -2,7 +2,7 @@ package java_oop;
 
 import java.util.ArrayList;
 
-public class User {
+public class User implements PrintInfo {
     private String id;
     private String firstName;
     private String lastName;
@@ -118,6 +118,21 @@ public class User {
     }
 
     public void printUserInfo() {
+        String userDataToPrint = "java_oop.User{" +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", billingAddress='" + billingAddress + '\'' +
+                ", deliveryAddress='" + deliveryAddress + '\'' +
+                ", role='" + role + '\'' +
+                '}';
+        System.out.println(userDataToPrint);
+    }
+
+    @Override
+    public void printinfo() {
         String userDataToPrint = "java_oop.User{" +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
