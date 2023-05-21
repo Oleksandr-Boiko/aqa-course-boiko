@@ -35,12 +35,12 @@ public class Manager extends User {
         return workPhoneNumber;
     }
 
-    public void setWorkPhoneNumber(String workPhoneNumber) {
+    public void setWorkPhoneNumber(String workPhoneNumber) throws PhoneFormatException {
         if (workPhoneNumber.startsWith("+")){
             this.workPhoneNumber = workPhoneNumber;
         }
         else {
-            System.out.println("Error: phone number must starts from + symbol");
+            throw new PhoneFormatException("Error: phone number must starts from + symbol");
         }
     }
 
