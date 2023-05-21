@@ -100,6 +100,10 @@ public class User implements PrintInfo {
         this.manager = manager;
     }
 
+    public void printAllUserCards(){
+        cards.forEach((card -> System.out.println(card.getNumber())));
+    }
+
     @Override
     public String toString() {
         return "java_oop.User{" +

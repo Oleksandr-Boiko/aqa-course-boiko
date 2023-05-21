@@ -1,6 +1,7 @@
 import java_oop.*;
 
 import static java_oop.cardType.MASTERCARD;
+import static java_oop.cardType.VISA;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,6 +14,9 @@ public class Main {
         User alex = new User("Oleksandr", "Boiko", "alex.boiko@pdffiller.team", new RoleType(roles.MAIN_CUSTOMER));
         alex.setDeliveryAddress(new Address("Ukraine", "Kyiv", "Paladina", "29", "03114"));
         alex.setCards(new Card("4444 3322 1122 5555", "09/28", 731, MASTERCARD));
+        alex.setCards(new Card("4322 2342 3333 6666", "01/24", 777, VISA));
+        alex.setCards(new Card("4141 6345 1111 7777", "02/25", 888, MASTERCARD));
+        alex.printAllUserCards();
         alex.setManager(pedro);
         alex.printUserInfo();
         System.out.println(alex.getId());
