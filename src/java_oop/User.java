@@ -25,6 +25,14 @@ public class User {
         role = roleType.getRole();
     }
 
+    public User(String firstName, String lastName, String email) {
+        id = "1" + System.currentTimeMillis();
+        this.fullName = firstName.concat(" " + lastName);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
     public User(String firstName, String lastName, String email, RoleType roleType) {
         this(firstName.concat(" " + lastName), email, roleType);
         this.firstName = firstName;
