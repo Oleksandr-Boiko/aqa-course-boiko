@@ -1,16 +1,18 @@
 package java_oop;
 
-public class RoleType {
-    private String roleType;
-    private Role role;
+import static java_oop.Roles.*;
 
-    public RoleType(String roleType) {
-        this.roleType = roleType;
-        switch (roleType) {
-            case "Admin" -> role = new Role(true, true, true, true);
-            case "Main Customer" -> role = new Role(true, true, true, false);
-            case "Customer" -> role = new Role(true, false, true, false);
-            case "Viewer" -> role = new Role(true, false, false, false);
+public class RoleType {
+    private Role role;
+    private Roles typeOfRole;
+
+    public RoleType(Roles typeOfRole) {
+        this.typeOfRole = typeOfRole;
+        switch (typeOfRole) {
+            case ADMIN -> role = new Role(true, true, true, true, ADMIN);
+            case MAIN_CUSTOMER -> role = new Role(true, true, true, false, MAIN_CUSTOMER);
+            case CUSTOMER -> role = new Role(true, false, true, false, CUSTOMER);
+            case VIEWER -> role = new Role(true, false, false, false, VIEWER);
         }
     }
 

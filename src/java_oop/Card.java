@@ -1,16 +1,19 @@
 package java_oop;
 
+import static java_oop.CardType.MASTERCARD;
+import static java_oop.CardType.VISA;
+
 public class Card {
     private String id;
     private String number;
     private String expiredDate;
     private int cvv;
-    private String cardType;
+    private CardType cardType;
 
-    public Card(String number, String expiredDate, int cvv, String cardType) {
+    public Card(String number, String expiredDate, int cvv, CardType typeOfCard) {
         id = "1" + System.currentTimeMillis();
-        if (cardType.equals("Visa") || cardType.equals("MasterCard")){
-            this.cardType = cardType;
+        if (typeOfCard.equals(VISA) || typeOfCard.equals(MASTERCARD)){
+            this.cardType = typeOfCard;
         }
         else {
             System.out.println("java_oop.Card type must be Visa or MasterCard");
@@ -50,12 +53,12 @@ public class Card {
         this.cvv = cvv;
     }
 
-    public String getCardType() {
+    public CardType getCardType() {
         return cardType;
     }
 
     public void setCardType(String cardType) {
-        this.cardType = cardType;
+        this.cardType = CardType.valueOf(cardType);
     }
 
     @Override
