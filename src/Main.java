@@ -18,5 +18,7 @@ public class Main {
         alex.setManager(pedro);
         alex.printUserInfo();
         System.out.println(alex.getId());
+
+        Child child = new Child();
     }
 }
