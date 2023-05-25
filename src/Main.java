@@ -6,7 +6,11 @@ import static java_oop.cardType.VISA;
 public class Main {
     public static void main(String[] args) {
         Manager pedro = new Manager("Pedro Huan", "pedro.huan@pdffiller.team", new RoleType(roles.ADMIN), "Master Yoda");
-        pedro.setWorkPhoneNumber("+380931234567");
+        try {
+            pedro.setWorkPhoneNumber("380931234567");
+        } catch (PhoneFormatException e) {
+            e.printStackTrace();
+        }
         pedro.setResponsibilityDistrict("Yoda's Hut");
         pedro.setPosition("Head Of Jedi");
         pedro.printinfo();
@@ -20,5 +24,7 @@ public class Main {
         alex.setManager(pedro);
         alex.printUserInfo();
         System.out.println(alex.getId());
+
+        Child child = new Child();
     }
 }
