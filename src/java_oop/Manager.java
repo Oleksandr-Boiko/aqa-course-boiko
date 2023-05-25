@@ -1,6 +1,6 @@
 package java_oop;
 
-public class Manager extends User implements PrintInfo {
+public class Manager extends User {
     private String position;
     private String responsibilityDistrict;
     private String workPhoneNumber;
@@ -54,8 +54,8 @@ public class Manager extends User implements PrintInfo {
     }
 
     @Override
-    public void printUserInfo() {
-        super.printUserInfo();
+    public void printInfo() {
+        super.printInfo();
         System.out.println(toString());
     }
 }

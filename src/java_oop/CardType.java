@@ -1,6 +1,6 @@
 package java_oop;
 
-public enum cardType {
+public enum CardType {
     VISA,
     MASTERCARD;
 }

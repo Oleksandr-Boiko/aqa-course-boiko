@@ -7,11 +7,12 @@ public class Role {
     private boolean deleteAll;
     private String role;
 
-    public Role(Boolean viewAll, Boolean editAll, Boolean addAll, Boolean deleteAll) {
+    public Role(Boolean viewAll, Boolean editAll, Boolean addAll, Boolean deleteAll, Roles role) {
         this.viewAll = viewAll;
         this.editAll = editAll;
         this.addAll = addAll;
         this.deleteAll = deleteAll;
+        this.role = role.name();
     }
 
     @Override

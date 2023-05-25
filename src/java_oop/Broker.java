@@ -25,7 +25,7 @@ public class Broker implements PrintInfo {
     }
 
     @Override
-    public void printinfo() {
+    public void printInfo() {
         System.out.println(toString());
     }
 }

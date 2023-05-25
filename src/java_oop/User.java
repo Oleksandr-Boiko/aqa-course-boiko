@@ -121,22 +121,8 @@ public class User implements PrintInfo {
                 '}';
     }
 
-    public void printUserInfo() {
-        String userDataToPrint = "java_oop.User{" +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", fullName='" + fullName + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", billingAddress='" + billingAddress + '\'' +
-                ", deliveryAddress='" + deliveryAddress + '\'' +
-                ", role='" + role + '\'' +
-                '}';
-        System.out.println(userDataToPrint);
-    }
-
     @Override
-    public void printinfo() {
+    public void printInfo() {
         String userDataToPrint = "java_oop.User{" +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +

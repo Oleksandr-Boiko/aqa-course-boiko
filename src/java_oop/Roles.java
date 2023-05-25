@@ -1,6 +1,6 @@
 package java_oop;
 
-public enum roles {
+public enum Roles {
     ADMIN,
     MAIN_CUSTOMER,
     CUSTOMER,
